@@ -28,9 +28,14 @@ public class User {
     private String email;
 
     private String password;
-
+    @Column(unique = true)
     private String phone;
     private String address;
+    private String otp;
+    private String otpExpiryDate;
+    private Boolean otpVerified;
+    private Boolean emailVerified;
+    private Boolean status;
     private String city;
     private String state;
     private String country;

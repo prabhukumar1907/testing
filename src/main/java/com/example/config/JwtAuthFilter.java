@@ -32,7 +32,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String requestURI = request.getRequestURI();
-        if (requestURI.startsWith("/api/auth/login") || requestURI.startsWith("/api/auth/register")) {
+        if (requestURI.startsWith("/api/auth/login")||requestURI.startsWith("/api/auth/verifyOtp") || requestURI.startsWith("/api/auth/register")) {
             filterChain.doFilter(request, response);
             return;
         }
